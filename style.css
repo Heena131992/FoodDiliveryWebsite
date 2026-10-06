@@ -122,36 +122,20 @@ nav {
 
 }
 
-/* Hamburger */
-
-.desktop-action{
-    display:flex;
-    align-items:center;
-    gap:1rem;
-    flex-shrink:0;
-}
-
-.desktop-action,.hamburger {
-    font-size:24px;
-    cursor:pointer;
-    color:#000;
-    
-}
-.hamburger {
-    font-size: 24px;
+/* Hamburger ko mobile me dikhana */
+  .hamburger {
+    display: inline-flex;
+    align-items: center;
     cursor: pointer;
-    color: #000;
-    display: none; 
-}
+  }
 
-.mobile-menu {
-    display: none;
-}
 
-.m-auto {
-    margin: auto;
-}
-
+  .desktop-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+  }
 /* Mobile Menu (default hidden) */
 
 /* SECTION STYLING 01*/
