@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "foodie-website",
+  "compatibility_date": "2026-10-22",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "Foodie_website",
+      "database_id": "0fb3de0a-fbc4-4b4d-b6b7-db8dea4a103a"
+    }
+  ]
+}
