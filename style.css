@@ -1,0 +1,1164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* //basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: .1rem solid red; */
+}
+
+:root {
+    --lead: #212122;
+    --gold-finger: #F2BD12;
+    --eye-ball: #fffdf7;
+    --hint-yello: #fcf1cc;
+    --pure-white: #fff;
+
+}
+
+body {
+    background: var(--eye-ball);
+}
+
+
+
+/* BASIC STYLING */
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--lead);
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+li {
+    list-style: none;
+}
+
+.between {
+    justify-content: space-between;
+
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: auto;
+
+    padding-inline: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+nav {
+    min-height: 90px;
+}
+
+/* ====================================================
+   2. HEADER & DESKTOP NAVBAR
+   ==================================================== */
+header {
+  width: 100%;
+  background-color: var(--pure-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  position: relative;
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--gold-finger);
+}
+
+/* Desktop Links */
+.navlist li a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-color);
+  transition: color 0.3s ease;
+}
+
+.navlist li a:hover,
+.navlist li a.active {
+  color: var(--gold-finger);
+}
+
+/* Cart Icon & Badge */
+.cart-icon {
+  position: relative;
+  font-size: 1.9rem;
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+}
+
+.cart-value {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--gold-finger);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sign-in Button */
+.btn {
+  background-color: var(--gold-finger);
+  color: #ffffff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(229, 169, 59, 0.3);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+
+}
+
+/* Hamburger & Mobile Menu (Desktop par Hidden) */
+.hamburger {
+  font-size: 3.5rem;
+  color: var(--dark-color);
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+/* Mobile Menu (default hidden) */
+
+/* SECTION STYLING 01*/
+/* ====================================================
+   1. BASE / DESKTOP STYLES
+   ==================================================== */
+.content,
+.image-container,
+.service-card {
+    flex: 1;
+    flex-basis: 300px;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4.5rem); /* Mobile se desktop tak khud auto-scale hoga */
+    color: var(--lead, #1a1a1a);
+    line-height: 1.2;
+}
+
+h1 span {
+    color: var(--gold-finger, #e5a93b);
+}
+
+h2 {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+    color: var(--lead, #1a1a1a);
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: var(--lead, #1a1a1a);
+}
+
+h5 {
+    font-size: 1.1rem;
+    color: var(--gold-finger, #e5a93b);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666666;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para {
+    margin-block: 1.5rem;
+    max-width: 550px;
+}
+
+/* Social Icons */
+.social-icon {
+    background: var(--hint-yello, #fdf3d8);
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    background: var(--lead, #1a1a1a);
+    color: var(--pure-white, #ffffff);
+    transform: translateY(-3px);
+}
+
+/* Spacing & Utilities */
+.p-top {
+    padding-top: 7rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.m-t4 {
+    margin-top: 3.5rem;
+}
+
+.mt-one {
+    margin-top: 1.2rem;
+}
+
+.service-card h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+
+/* ====================================================
+   2. TABLET RESPONSIVE (max-width: 780px)
+   ==================================================== */
+/* ====================================================
+   FIX: Screen jab 992px ya usse choti ho (Tablet/Mobile)
+   ==================================================== */
+@media screen and (max-width: 992px) {
+  
+  /* 1. Main hero section ko vertical stack karein */
+  .hero,
+  .hero-section,
+  .banner,
+  .home-container {
+    flex-direction: column-reverse !important; /* Image ko text ke theek neeche bhej dega */
+    text-align: center;
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  /* 2. Content & Image dono ko poori width dein */
+  .content,
+  .image-container {
+    flex-basis: 100% !important;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 3. Text aur paragraph ko center karein */
+  .para {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 4. Buttons aur Social icons ko center karein */
+  .content .flex,
+  .social-icons,
+  .btn-container {
+    justify-content: center;
+  }
+
+  /* 5. Image ka size screen ke hisaab se adjust karein */
+  .image-container img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* ====================================================
+   FIX: Chhote Mobile Phones (max-width: 576px / 480px)
+   ==================================================== */
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 2.3rem;
+    line-height: 1.25;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .image-container img {
+    max-width: 90%;
+  }
+}
+
+
+/* ========Social Icon section========= */
+.service-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+h5 {
+    font-size: 1.2rem;
+
+    color: var(--gold-finger);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color: var(--lead);
+
+}
+
+h3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: var(--lead);
+}
+
+.service-card {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Section 02 */
+.order-card {
+    flex: 1;
+    flex-basis: 300px;
+    background: var(--pure-white);
+    padding: 0 1rem 2rem 1rem;
+    border: .1rem solid var(--gold-finger);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px, rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+    transition: all .5s ease-in-out;
+}
+
+
+.order-card img {
+    width: 15rem;
+    filter: drop-shadow(rgba(0, 0, 0, 0.0.5));
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: var(--lead);
+}
+
+.order-card .price {
+    font-size: 1.7rem;
+    color: var(--gold-finger);
+    padding: 1.3rem 0 2rem 0;
+}
+
+/* cart tab stlying */
+.cart-tab {
+    background: var(--hint-yello);
+    position: fixed;
+    inset: 0 -500px 0 auto;
+    width: 25rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.1);
+    transition: .3s ease-in-out;
+    z-index:900;
+}
+
+.cart-tab-active {
+    inset: 0 0 0 auto;
+}
+
+
+.cart-list {
+    flex: 1;
+    width: 100%;
+    margin-top: 1.5rem;
+    overflow: auto;
+}
+
+.cart-list::-webkit-scrollbar {
+    width: 0;
+}
+
+.total-container {
+    width: 100%;
+    background: var(--gold-finger);
+    text-align: center;
+    margin-block: 1rem;
+    padding-block: 1rem;
+
+}
+
+.total-container h4 {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* 03 section styling */
+/* swipper css */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* slider styling */
+.review-container {
+    width: 650px;
+    max-width: 100%;
+    flex: 1;
+
+}
+
+.profile {
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    overflow: hidden;
+
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.btn-container .btn {
+    background: var(--lead);
+    transition: .3s ease-in-out;
+
+}
+
+.btn-container .btn:hover {
+    background: var(--gold-finger);
+    color: var(--lead);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: .7rem 1rem;
+    transition: all .5s ease-in-out;
+    gap: 1rem;
+    transition: all .5s ease-in-out;
+}
+
+.item.slide-out {
+    transform: translateX(50%);
+}
+
+
+.item .detail {
+    flex: 2;
+}
+
+.cart-list .item:nth-child(even) {
+    background: var(--eye-ball);
+}
+
+.item .item-image img {
+    width: 5rem;
+
+
+}
+
+.item.slide-out .item h4 {
+    font-size: 1.3rem;
+    color: var(--lead);
+
+}
+
+.item {
+    transition: all 0.3s ease;
+}
+
+.item .total-item {
+    font-weight: 400;
+    margin-top: .3rem;
+}
+
+.quantity-btn {
+    background: var(--lead);
+    color: var(--pure-white);
+    width: 1.7rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+.quantity-value {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-inline: .6rem;
+}
+
+
+.fa-star {
+    color: var(--gold-finger);
+
+}
+
+.mt-one-half {
+    margin-top: .5rem;
+}
+
+.arrow {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: var(--gold-finger);
+    color: var(--lead);
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+/* 04section04 */
+.app-container {
+    background: var(--hint-yello);
+    padding: 3rem 6rem;
+    border-radius: 3rem;
+
+
+
+}
+
+.app-container h2 {
+    font-size: 4.5rem;
+}
+
+.app-container img {
+    width: 25rem;
+
+
+}
+
+/* 05 section */
+.input-container {
+    width: 43rem;
+    max-width: 100%;
+    background: var(--pure-white);
+    padding: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 8px;
+    border-radius: 1rem;
+    margin-top: 4rem auto 0 auto;
+}
+
+input[type="email"] {
+    flex: 1;
+    height: 7vh;
+    background: var(--pure-white);
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+
+input[type="email"]:focus {
+    outline: none;
+
+
+}
+
+
+/* FOOTER STYLING */
+.footer-container {
+    margin-top: 10rem;
+    padding-block: 4rem;
+    background: var(--hint-yello);
+}
+
+.footer-wrapper {
+    flex: 1;
+
+}
+
+.footer-wrapper .social-icon {
+    background: var(--pure-white);
+}
+
+.footer-wrapper .social-icon:hover {
+    background: var(--lead);
+    color: var(--pure-white);
+}
+
+.footer-link {
+    color: gray;
+    font-size: 1.1rem;
+    transition: .3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: var(--lead);
+}
+
+.footer-container .flex {
+    align-items: flex-start;
+}
+
+.footer-wrapper {
+    flex: 1;
+    flex-basis: 150px;
+}
+
+.footer-wrapper:nth-child(1) {
+    flex: 2;
+    flex-basis: 300px;
+}
+
+/* ----------check out style----------- */
+/* CHECKOUT MODAL STYLING */
+.checkout-modal {
+    display: none; /* डिफ़ॉल्ट रूप से छुपा रहेगा */
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* बैकग्राउंड ब्लर करने के लिए */
+    z-index: 2000; /* कार्ट टैब से भी ऊपर दिखेगा */
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+/* एक्टिव होने पर दिखाने के लिए क्लास (JS द्वारा चालू होगी) */
+.checkout-modal.active {
+    display: flex;
+}
+
+.checkout-content {
+    background: var(--pure-white);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* क्लोज (X) बटन */
+.close-checkout {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--lead);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-checkout:hover {
+    color: var(--gold-finger);
+}
+
+.checkout-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--lead);
+    border-bottom: 2px solid var(--hint-yello);
+    padding-bottom: 0.5rem;
+}
+
+/* फॉर्म इनपुट ग्रुप्स */
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--lead);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--hint-yello);
+    border-radius: 0.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--gold-finger);
+    background-color: var(--eye-ball);
+}
+
+/* रेडियो बटन्स (Payment Method) */
+.payment-options {
+    margin-top: 0.3rem;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* आर्डर समरी टोटल */
+.order-total-display {
+    background: var(--hint-yello);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--lead);
+    margin-block: 1.5rem;
+}
+
+.order-total-display span {
+    color: #d48b00;
+}
+
+/* सबमिट बटन */
+.submit-order-btn {
+    width: 100%;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* SUCCESS POPUP STYLING */
+.success-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 2500; /* चेकआउट फॉर्म से भी ऊपर */
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.success-popup.active {
+    display: flex;
+}
+
+.success-content {
+    background: var(--pure-white);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: popUpScale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popUpScale {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.success-icon {
+    font-size: 4.5rem;
+    color: #2ecc71; /* ग्रीन कलर सक्सेस के लिए */
+    margin-bottom: 1rem;
+}
+
+.success-content h2 {
+    font-size: 2.2rem;
+    color: var(--lead);
+    margin-bottom: 0.5rem;
+}
+
+.success-content p {
+    font-size: 1.05rem;
+    color: gray;
+    margin-bottom: 1.5rem;
+}
+
+.order-id-box {
+    background: var(--hint-yello);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: var(--lead);
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+#closeSuccessBtn {
+    width: 100%;
+    justify-content: center;
+}
+/* SIGN IN MODAL STYLING */
+.signin-modal {
+    display: none; /* डिफ़ॉल्ट रूप से छुपा रहेगा */
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.signin-modal.active {
+    display: flex;
+}
+
+.signin-content {
+    background: var(--pure-white);
+    padding: 3rem 2.5rem;
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDownCustom 0.4s ease-out;
+}
+
+@keyframes slideDownCustom {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-signin {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--lead);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-signin:hover {
+    color: var(--gold-finger);
+}
+
+.signin-content h2 {
+    font-size: 2.2rem;
+    color: var(--lead);
+    margin-bottom: 0.3rem;
+}
+
+.signin-subtitle {
+    font-size: 0.95rem !important;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+.submit-signin-btn {
+    width: 100%;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.signup-redirect {
+    text-align: center;
+    font-size: 0.95rem !important;
+    margin-top: 1.5rem;
+    color: gray;
+}
+
+.signup-redirect a {
+    color: var(--gold-finger);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* MEDIA QUERIES */
+
+/* /Hero styling */
+/* MEDIA QUERIES */
+/* ====================================================
+   1. DESKTOP / DEFAULT STYLES
+   ==================================================== */
+
+
+.desktop-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.desktop-action,
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Desktop screen par hamburger aur mobile menu chhipe rahenge */
+.hamburger {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+
+/* ====================================================
+   2. TABLET / MOBILE (max-width: 780px)
+   ==================================================== */
+@media screen and (max-width: 780px) {
+
+    /* Desktop links aur desktop buttons hide */
+    .navlist,
+    .desktop-action .btn {
+        display: none !important;
+    }
+
+    /* Mobile par hamburger show karein */
+    .hamburger {
+        display: block !important;
+        font-size: 24px;
+    }
+
+    .desktop-action {
+        display: flex !important;
+        align-items: center;
+        gap: 1.2rem;
+        margin-left: auto; /* Logo left me rahega, Bag + Hamburger right me */
+    }
+
+    /* Sliding Mobile Drawer */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        
+        position: absolute;
+        top: 100%;        
+        left: -100%;      
+        width: 100%;      
+        transform: none;  
+        
+        padding: 2rem;
+        background: var(--pure-white, #ffffff);
+        border: .1rem solid var(--gold-finger, #e5a93b);
+        border-radius: 0 0 2rem 2rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px;
+        transition: all 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    .mobile-menu-active {
+        left: 0 !important; 
+    }
+
+    /* Typography & Spacing */
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .content {
+        padding-top: 2.5rem;
+    }
+
+    .gap-2 {
+        gap: 1.4rem;
+    }
+
+    .gap-4 {
+        gap: 2rem;
+    }
+
+    .app-container {
+        padding: 2.2rem;
+    }
+
+    .app-container .content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Purani 780px wali line ko badal kar 950px karein */
+@media screen and (max-width: 950px) {
+.navbar {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap !important; /* kisi bhi element ko neeche girne nahi dega */
+    width: 100%;
+}
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 auto; /* Links ko beech me rakhega */
+}
+   .navlist li a {
+    white-space: nowrap; /* text do line me na toote */
+}
+    .desktop-action .btn {
+        display: none !important;
+    }
+
+ .logo {
+
+    flex-shrink: 0;
+}
+
+    .desktop-action {
+        display: flex !important;
+        align-items: center;
+justify-content: space-between;
+        gap: 1.2rem;
+    }
+}
+/* ====================================================
+   3. SMALL MOBILE PHONES (max-width: 480px)
+   ==================================================== */
+@media screen and (max-width: 480px) {
+
+  /* 1. Navbar ko ek line me lock karein aur wrap hone se rokein */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap !important; /* elements ko neeche girne se rokega */
+    width: 100%;
+    gap: .25rem;
+font-size: 16px;
+}
+/* 2. Menu links ka gap thoda kam karein taaki jagah bache */
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: .5rem; /* agar gap zyada tha to usse 1.5rem karein */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navlist li a {
+    white-space: nowrap; /* text do line me na toote */
+}
+
+/* 3. Right side action buttons ko shrink hone aur wrap hone se rokein */
+.desktop-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0; /* isse ye buttons kabhi neeche nahi aayenge */
+    white-space: nowrap;
+}
+
+    .desktop-action,
+    .hamburger {
+        font-size: 20px; /* Chhoti screen par thoda compact size */
+    }
+
+    .desktop-action {
+        gap: 0.8rem;
+    }
+
+    /* Hero section text alignment aur size */
+    h1 {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .mobile-menu {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .app-container {
+        padding: 1.2rem;
+    }
+
+    .app-container .content h2 {
+        font-size: 1.8rem;
+    }
+}

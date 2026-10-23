@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -105,3 +106,6 @@ export async function onRequest({ request, env }) {
     return json({ error: "Catalogue operation failed" }, 500);
   }
 }
+=======
+
+>>>>>>> 3a3509351327c691fbd24a48a99efdb3f360c0c6
