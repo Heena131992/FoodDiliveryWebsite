@@ -1,23 +1,3 @@
-const initApp = () => {
-    fetch('https://foodie-dashboard.pages.dev/api/products')
-        .then(response => response.json())
-        .then(data => {
-            productList = data
-                .filter(item => item.isAvailable)
-                .map(item => ({
-                    id: item.id,
-                    name: item.name,
-                    price: `$${Number(item.price).toFixed(2)}`,
-                    images: item.image
-                }));
-            showCards();
-        })
-        .catch(error => {
-            console.error('Products load error:', error);
-        });
-};
-
-
 
 // 1. MOBILE MENU TOGGLE
 const hamburger = document.querySelector('.hamburger');
@@ -121,20 +101,21 @@ const showCards = () => {
 
 // 6. FETCH PRODUCTS FROM JSON
 const initApp = () => {
-    fetch('./products.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('products.json file nahi mili');
-            }
-            return response.json();
-        })
+    fetch('https://foodie-dashboard.pages.dev/api/products')
+        .then(response => response.json())
         .then(data => {
-            productList = data;
+            productList = data
+                .filter(item => item.isAvailable)
+                .map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    price: `$${Number(item.price).toFixed(2)}`,
+                    images: item.image
+                }));
             showCards();
         })
         .catch(error => {
             console.error('Products load error:', error);
-            cardList.innerHTML = `<p style="color: red;">Menu load nahi ho paya. Kripya Live Server ya Localhost par website chalayein.</p>`;
         });
 };
 
@@ -360,5 +341,7 @@ if (newsletterForm) {
 document.addEventListener('DOMContentLoaded', () => {
     updateUIForLoggedInUser();
 });
+
+
 
 
