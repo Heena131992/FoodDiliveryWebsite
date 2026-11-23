@@ -1,3 +1,24 @@
+const initApp = () => {
+    fetch('https://foodie-dashboard.pages.dev/api/products')
+        .then(response => response.json())
+        .then(data => {
+            productList = data
+                .filter(item => item.isAvailable)
+                .map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    price: `$${Number(item.price).toFixed(2)}`,
+                    images: item.image
+                }));
+            showCards();
+        })
+        .catch(error => {
+            console.error('Products load error:', error);
+        });
+};
+
+
+
 // 1. MOBILE MENU TOGGLE
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -339,3 +360,5 @@ if (newsletterForm) {
 document.addEventListener('DOMContentLoaded', () => {
     updateUIForLoggedInUser();
 });
+
+
